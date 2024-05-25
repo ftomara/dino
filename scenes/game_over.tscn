@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cypem6in3crrb"]
+
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_6olf2"]
+[ext_resource type="AudioStream" uid="uid://da8j8gkxtb82d" path="res://assets/sound/8-bit-video-game-fail-version-2-145478.mp3" id="2_0jmp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd7m7"]
+bg_color = Color(0.0941176, 0.72549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wy405"]
+bg_color = Color(0.0823529, 0.701961, 0.54902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awxka"]
+bg_color = Color(0.137255, 0.709804, 0.443137, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="restart" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.5
+offset_top = -36.0
+offset_right = 132.5
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_6olf2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_sd7m7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wy405")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_awxka")
+text = "RESTART"
+
+[node name="loser" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_0jmp1")
